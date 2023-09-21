@@ -7,9 +7,11 @@ import { ApiContextProvider } from "@/Context/ApiContext";
 import axios from 'axios';
 import Navigator from "@/components/Navigator";
 import { BiLogOut } from "react-icons/bi";
+import { useRouter } from "next/navigation";
 
 const page = () => {
     const context = useContext(ApiContextProvider)
+    const route = useRouter()
 
     const handleImageChange = async (e) => {
         const formData = new FormData();
@@ -58,7 +60,9 @@ const page = () => {
                         </div>
                         <div onClick={() => {
                             localStorage.removeItem('phone')
+                            // route.push('/')
                             window.location.reload()
+                            window.location.pathname = '/'
                         }} className='cursor-pointer md:hidden
                     
                     hover:bg-neutral-800 hover:text-white transition-all p-1 hover:py-2 hover:rounded-full
