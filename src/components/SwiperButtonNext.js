@@ -49,7 +49,9 @@ const SwiperButtonNext = (props) => {
                     })
                     .then((e) => e.json())
                     .then((e) => {
+                        context?.setLoading(true)
                         if(e?.success){
+                            context?.setLoading(false)
                             window.location.pathname == '/'
                         }if(e?.error){
                             alert(e?.error)
@@ -57,7 +59,6 @@ const SwiperButtonNext = (props) => {
                     })
                 })
                 context?.getHomeworks()
-                context?.setLoading(false)
             }else{
                 console.log('no select');
             }
@@ -66,7 +67,6 @@ const SwiperButtonNext = (props) => {
 
         
         if(selectedValue){
-            context?.setLoading(false)
             swiper.slideNext()
         }else{
             context?.setLoading(false)
