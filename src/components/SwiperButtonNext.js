@@ -49,7 +49,7 @@ const SwiperButtonNext = (props) => {
                     })
                     .then((e) => e.json())
                     .then((e) => {
-                        context?.setLoading(false)
+                        context?.setLoading(true)
                         if(e?.success){
                             context?.setLoading(false)
                             window.location.pathname == '/'
@@ -59,6 +59,7 @@ const SwiperButtonNext = (props) => {
                     })
                 })
                 context?.getHomeworks()
+                context?.setLoading(false)
             }else{
                 console.log('no select');
             }
@@ -68,6 +69,7 @@ const SwiperButtonNext = (props) => {
         
         if(selectedValue){
             swiper.slideNext()
+            context?.setLoading(false)
         }else{
             context?.setLoading(false)
             alert('يجب ان تدخل اجابة')
