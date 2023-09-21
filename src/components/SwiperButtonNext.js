@@ -79,7 +79,15 @@ const SwiperButtonNext = (props) => {
 
     return <button
         onClick={(e) => {
-            sendAnswer(e)
+            context?.setLoading(true)
+            if(swiper.isEnd){
+                sendAnswer(e)
+                route.push('/')
+                context?.setLoading(false)
+            }else{
+                sendAnswer(e)                
+                context?.setLoading(false)
+            }
         }}
         className="w-fit px-3 ms-auto"
     >
