@@ -11,7 +11,7 @@ const page = () => {
     <div className="md:flex-row-reverse md:flex">
       <Navigator />
       {context?.lessons?.map((e: any) => (
-        <div className="md:w-full pt-3" key={e?.id}>
+        <div className="md:w-full pt-3 pb-20" key={e?.id}>
           <div className="px-2 pb-10 text-end">
             <div
               className="restof 
