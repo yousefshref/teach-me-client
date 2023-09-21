@@ -56,6 +56,21 @@ const page = () => {
                             <p>موعد التجديد</p>
                             <p>{context?.student?.renew_date}</p>
                         </div>
+                        <div onClick={() => {
+                            localStorage.removeItem('phone')
+                            window.location.reload()
+                        }} className='flex justify-center text-2xl
+                    
+                    hover:bg-neutral-800 hover:text-white transition-all p-1 hover:py-2 hover:rounded-full
+                    
+                    mt-auto
+                    lg:flex lg:justify-between lg:text-sm
+                    '>
+                            <span className='lg:my-auto'>
+                                <BiLogOut />
+                            </span>
+                            <h3 className='md:hidden lg:block'>تسجيل الخروج</h3>
+                        </div>
                     </div>
                 </div>
             </div>
