@@ -4,23 +4,23 @@ import { TextField, FormControl, InputLabel, Select, MenuItem } from "@mui/mater
 import { useState, useContext } from "react";
 
 const LoginRequried = () => {
-  const [login, setlogin] = useState<any>(false);
+  const [login, setlogin] = useState<any>(true);
   const context = useContext(ApiContextProvider)
   return (
     <div className="login z-20 bg-neutral-600 bg-opacity-50 h-[100vh] flex flex-col justify-center p-5 absolute left-[50%] translate-x-[-50%] shadow-2xl w-[100%] top-[50%] translate-y-[-50%]">
       {!login ? (
         <div className="bg-white p-6 rounded-md">
           <div className="flex justify-center">
-            <h3 className="text-2xl text-center">
+            <h3 className="text-lg text-center">
               أهلا بك في منصتنا, يرجي تسجيل الدخول لتتفاعل معنا
             </h3>
           </div>
             <hr className="my-3" />
-          <div className="text-center flex flex-row gap-3 justify-center">
-            <h3 onClick={() => setlogin(false)} className={`cursor-pointer border p-1 border-red-50 ${login ? 'border-b-2 border-red-700' : ''}`}>
+          <div className="text-center text-sm flex flex-row gap-3 justify-center my-3 border border-rose-400 p-1 pb-2">
+            <h3 onClick={() => setlogin(false)} className={`cursor-pointer ${!login ? 'border-b-2 border-red-700' : ''}`}>
               تسجيل الدخول
             </h3>
-            <h3 onClick={() => setlogin(true)} className={`cursor-pointer border p-1 border-red-50 ${!login ? 'border-b-2 border-red-700' : ''}`}>
+            <h3 onClick={() => setlogin(true)} className={`cursor-pointer ${login ? 'border-b-2 border-red-700' : ''}`}>
               انشاء حساب جديد
             </h3>
           </div>
@@ -41,16 +41,16 @@ const LoginRequried = () => {
       ) : (
         <div className="bg-white p-6 rounded-md">
           <div className="flex justify-center">
-            <h3 className="text-3xl">
+            <h3 className="text-lg text-center">
               أهلا بك في منصتنا, يرجي تسجيل الدخول لتتفاعل معنا
             </h3>
           </div>
             <hr className="my-3" />
-          <div className="text-center flex flex-row gap-3 justify-center">
-            <h3 onClick={() => setlogin(true)} className={`cursor-pointer ${login ? 'border-b-2 border-red-700' : ''}`}>
+          <div className="text-center text-sm flex flex-row gap-3 justify-center my-3 border border-rose-400 p-1 pb-2">
+            <h3 onClick={() => setlogin(false)} className={`cursor-pointer ${!login ? 'border-b-2 border-red-700' : ''}`}>
               تسجيل الدخول
             </h3>
-            <h3 onClick={() => setlogin(false)} className={`cursor-pointer ${!login ? 'border-b-2 border-red-700' : ''}`}>
+            <h3 onClick={() => setlogin(true)} className={`cursor-pointer ${login ? 'border-b-2 border-red-700' : ''}`}>
               انشاء حساب جديد
             </h3>
           </div>

@@ -53,7 +53,7 @@ const page = () => {
           </div>
           <hr className="my-4" />
           <div>
-            <strong className="text-red-300 p-2 text-end flex justify-end">:ملاحظة<br /> لا تخرج من الامتحان والا بذلك يجب ان تتحدث مع المدرس لكي تعيد الامتحان</strong>
+            <strong className="text-red-300 p-2 text-end flex justify-end">:ملاحظة<br /> كن حذرا في الاختيارات وعدم الخروج من الامتحان نهائيا لعدم حدوث اي مشكلة</strong>
           </div>
           <hr className="my-4" />
           <div className="answer">
