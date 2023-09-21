@@ -1,6 +1,5 @@
 'use client'
 import { ApiContextProvider } from "@/Context/ApiContext"
-import { Header } from "@/components/Header"
 import Link from "next/link"
 import { useContext } from "react"
 import { server } from "../../../utlits"

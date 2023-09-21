@@ -1,5 +1,4 @@
 'use client'
-import { Header } from "@/components/Header"
 import Image from "next/image"
 import Rating from '@mui/material/Rating';
 import { server } from "../../../utlits";
@@ -7,6 +6,7 @@ import { useContext, useState } from "react";
 import { ApiContextProvider } from "@/Context/ApiContext";
 import axios from 'axios';
 import Navigator from "@/components/Navigator";
+import { BiLogOut } from "react-icons/bi";
 
 const page = () => {
     const context = useContext(ApiContextProvider)
@@ -59,14 +59,14 @@ const page = () => {
                         <div onClick={() => {
                             localStorage.removeItem('phone')
                             window.location.reload()
-                        }} className='flex justify-center text-2xl
+                        }} className='cursor-pointer md:hidden
                     
                     hover:bg-neutral-800 hover:text-white transition-all p-1 hover:py-2 hover:rounded-full
                     
                     mt-auto
-                    lg:flex lg:justify-between lg:text-sm
+                    flex justify-between text-sm
                     '>
-                            <span className='lg:my-auto'>
+                            <span className='my-auto'>
                                 <BiLogOut />
                             </span>
                             <h3 className='md:hidden lg:block'>تسجيل الخروج</h3>

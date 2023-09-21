@@ -1,5 +1,4 @@
 "use client";
-import { Header } from "@/components/Header";
 import { useContext, useRef, useState } from "react";
 import { ApiContextProvider } from "@/Context/ApiContext";
 import SwiperButtonNext from '@/components/SwiperButtonNext'
@@ -67,8 +66,8 @@ const page = () => {
                   >
                     {e?.questions?.map((i) => (
                       <SwiperSlide key={i.id}>
-                        <div className="flex flex-col gap-2">
-                          {i?.image ? <Image src={server+i?.image} className="w-[100%]" width={500} height={500} alt="" /> : null}
+                        <div className="flex flex-col gap-2 text-end">
+                          {i?.image ? <Image src={server+i?.image} className="w-[500px] ms-auto" width={500} height={500} alt="" /> : null}
                           <div className="flex flex-col text-end gap-3 py-2">
                             <h3 className="underline underline-offset-8 text-2xl"> :السؤال</h3>
                             <h3 className="underline underline-offset-8 text-2xl">{i?.text}</h3>
