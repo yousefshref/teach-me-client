@@ -11,9 +11,8 @@ const page = () => {
     const context = useContext(ApiContextProvider)
     
     if(!context?.student?.is_paied && context?.student?.id){
-        return <RenewRequeired />
+        return <h3 className="text-center">تم ايقاف حسابك مؤقتا يرجي التواصل مع المسؤول لمعرفة التفاصيل</h3>
     }
-
     
     return (
         <div className="pb-10 md:flex md:flex-row-reverse">

@@ -39,9 +39,9 @@ const LoginRequried = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-white p-6 rounded-md">
+        <div className="bg-white px-6 rounded-md h-[100vh] flex flex-col justify-center">
           <div className="flex justify-center">
-            <h3 className="text-lg text-center">
+            <h3 className="text-center">
               أهلا بك في منصتنا, يرجي تسجيل الدخول لتتفاعل معنا
             </h3>
           </div>
@@ -57,19 +57,19 @@ const LoginRequried = () => {
           <div className="flex flex-col gap-5 text-end">
             <div className="flex flex-col gap-2">
               <label>اكتب اسمك بالكامل</label>
-              <TextField onChange={(e:any) => context?.setname(e.target.value)} placeholder="الاسم" variant="filled" />
+              <input onChange={(e:any) => context?.setname(e.target.value)} placeholder="الاسم" className="border border-neutral-700" />
             </div>
             <div className="flex flex-col gap-2">
               <label>اكتب رقم هاتفك</label>
-              <TextField onChange={(e:any) => context?.setphone(e.target.value)} placeholder="رقم الهاتف" variant="filled" />
+              <input onChange={(e:any) => context?.setphone(e.target.value)} placeholder="رقم الهاتف"  className="border border-neutral-700" />
             </div>
             <div className="flex flex-col gap-2">
               <label>كلمة المرور</label>
-              <TextField onChange={(e:any) => context?.setpassword(e.target.value)} placeholder="كلمة المرور" variant="filled" />
+              <input onChange={(e:any) => context?.setpassword(e.target.value)} placeholder="كلمة المرور"  className="border border-neutral-700" />
             </div>
             <div className="flex flex-col gap-2">
               <label>تأكيد كلمة المرور</label>
-              <TextField onChange={(e:any) => context?.setpassword2(e.target.value)} placeholder="تأكيد كلمة المرور" variant="filled" />
+              <input onChange={(e:any) => context?.setpassword2(e.target.value)} placeholder="تأكيد كلمة المرور"  className="border border-neutral-700" />
             </div>
             <div className="flex flex-col gap-2 text-end">
               <label className="text-end">أختر مرحلتك التعليمية</label>

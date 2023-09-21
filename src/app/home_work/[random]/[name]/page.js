@@ -41,6 +41,10 @@ const page = () => {
     
   }
 
+  if(!context?.student?.is_paied && context?.student?.id){
+    return <h3 className="text-center">تم ايقاف حسابك مؤقتا يرجي التواصل مع المسؤول لمعرفة التفاصيل</h3>
+}
+
   return (
     <div>
       <div className="md:flex-row-reverse md:flex">

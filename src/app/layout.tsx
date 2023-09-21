@@ -6,6 +6,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
     <html lang="en">
       <head>
@@ -18,6 +19,7 @@ export default function RootLayout({
           .
         </div> */}
           <ApiContext>
+
             {children}
           </ApiContext>
       </body>

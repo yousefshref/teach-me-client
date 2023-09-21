@@ -13,6 +13,10 @@ const page = () => {
     const context = useContext(ApiContextProvider)
     const route = useRouter()
 
+    if(!context?.student?.is_paied && context?.student?.id){
+        return <h3 className="text-center">تم ايقاف حسابك مؤقتا يرجي التواصل مع المسؤول لمعرفة التفاصيل</h3>
+    }
+
     const handleImageChange = async (e) => {
         const formData = new FormData();
         formData.append('image', e);
