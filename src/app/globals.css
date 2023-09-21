@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply overflow-x-hidden
+}
+
+h1 {
+  @apply text-6xl;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+label, strong {
+  font-family: "Tajawal", sans-serif;
+}
+
+input{
+  @apply text-end placeholder:text-end shadow-lg p-3 rounded-md
+}
+
+button{
+  @apply bg-orange-200 hover:bg-orange-300 transition-all p-2 hover:px-3 hover:font-medium hover:rounded-lg hover:shadow-2xl hover:text-white
+}
+
