@@ -49,7 +49,7 @@ const SwiperButtonNext = (props) => {
                     })
                     .then((e) => e.json())
                     .then((e) => {
-                        context?.setLoading(true)
+                        context?.setLoading(false)
                         if(e?.success){
                             context?.setLoading(false)
                             window.location.pathname == '/'
