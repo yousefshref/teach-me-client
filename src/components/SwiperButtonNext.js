@@ -50,8 +50,7 @@ const SwiperButtonNext = (props) => {
                     .then((e) => e.json())
                     .then((e) => {
                         if(e?.success){
-                            route.push('/')
-                            window.location.reload()
+                            window.location.pathname == '/'
                         }if(e?.error){
                             alert(e?.error)
                         }
